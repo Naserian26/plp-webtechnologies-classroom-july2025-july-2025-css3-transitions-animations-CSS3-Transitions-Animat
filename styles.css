@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+#myButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    transition: transform 1s ease-in-out,background-color 0.5s ease;
+    box-shadow: 0 9px #999;
+}
+#myButton:hover {
+    transform: translate(0, -5px);
+    background-color: #8e553e
+}
+
+.container img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;                  /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Soft shadow */
+    transition: transform 0.5s ease, 
+                filter 0.5s ease, 
+                box-shadow 0.5s ease, 
+                border-radius 0.5s ease;
+                 animation: rotate360 1s linear;
+}
+
+.container img:hover {
+    transform: scale(1.1) rotate(-5deg);  /* Zoom + slight rotation */
+    filter: brightness(1.2) contrast(1.1); /* Brighter and more contrast */
+    box-shadow: 0 20px 30px rgba(0,0,0,0.5); /* Bigger shadow for depth */
+    border-radius: 20px;                   /* More rounded corners */
+}
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.info-card {
+  width: 250px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+  background-color: #45a049;
+}
+
+/* Optional keyframe for floating animation */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.info-card {
+  animation: floatCard 3s ease-in-out infinite;
+}
